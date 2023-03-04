@@ -10,6 +10,5 @@ export_presets.cfg
 .mono/
 data_*/
 
-#godot 4
-*/.godot
+# Godot 4
 .godot

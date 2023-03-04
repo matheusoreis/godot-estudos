@@ -1,0 +1,207 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4r7h2epcvp2k"]
+
+[ext_resource type="Script" path="res://scripts/calc.gd" id="1_sj2jv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cmupa"]
+font_size = 22
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d05no"]
+
+[node name="Calculadora" type="Control" node_paths=PackedStringArray("display_numbers")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sj2jv")
+display_numbers = NodePath("background/display/label_numbers")
+
+[node name="background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="display" type="Panel" parent="background"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -16.0
+offset_bottom = 79.0
+grow_horizontal = 2
+
+[node name="label_numbers" type="Label" parent="background/display"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -25.0
+offset_right = -7.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_cmupa")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="button grid" type="GridContainer" parent="background"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 100.0
+offset_right = 335.0
+offset_bottom = 443.0
+columns = 4
+
+[node name="7" type="Button" parent="background/button grid" groups=["button"]]
+custom_minimum_size = Vector2(70, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d05no")
+action_mode = 0
+text = "7"
+
+[node name="8" type="Button" parent="background/button grid" groups=["button"]]
+custom_minimum_size = Vector2(70, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d05no")
+action_mode = 0
+text = "8"
+
+[node name="9" type="Button" parent="background/button grid" groups=["button"]]
+custom_minimum_size = Vector2(70, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d05no")
+action_mode = 0
+text = "9"
+
+[node name="division" type="Button" parent="background/button grid" groups=["button"]]
+custom_minimum_size = Vector2(70, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d05no")
+action_mode = 0
+text = "/"
+
+[node name="4" type="Button" parent="background/button grid" groups=["button"]]
+custom_minimum_size = Vector2(70, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d05no")
+action_mode = 0
+text = "4"
+
+[node name="5" type="Button" parent="background/button grid" groups=["button"]]
+custom_minimum_size = Vector2(70, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d05no")
+action_mode = 0
+text = "5"
+
+[node name="6" type="Button" parent="background/button grid" groups=["button"]]
+custom_minimum_size = Vector2(70, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d05no")
+action_mode = 0
+text = "6"
+
+[node name="times" type="Button" parent="background/button grid" groups=["button"]]
+custom_minimum_size = Vector2(70, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d05no")
+action_mode = 0
+text = "*"
+
+[node name="1" type="Button" parent="background/button grid" groups=["button"]]
+custom_minimum_size = Vector2(70, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d05no")
+action_mode = 0
+text = "1"
+
+[node name="2" type="Button" parent="background/button grid" groups=["button"]]
+custom_minimum_size = Vector2(70, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d05no")
+action_mode = 0
+text = "2
+"
+
+[node name="3" type="Button" parent="background/button grid" groups=["button"]]
+custom_minimum_size = Vector2(70, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d05no")
+action_mode = 0
+text = "3
+"
+
+[node name="subtraction" type="Button" parent="background/button grid" groups=["button"]]
+custom_minimum_size = Vector2(70, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d05no")
+action_mode = 0
+text = "-"
+
+[node name="c" type="Button" parent="background/button grid" groups=["button"]]
+custom_minimum_size = Vector2(70, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d05no")
+action_mode = 0
+text = "c"
+
+[node name="0" type="Button" parent="background/button grid" groups=["button"]]
+custom_minimum_size = Vector2(70, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d05no")
+action_mode = 0
+text = "0"
+
+[node name="=" type="Button" parent="background/button grid" groups=["button"]]
+custom_minimum_size = Vector2(70, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d05no")
+action_mode = 0
+text = "="
+
+[node name="addition" type="Button" parent="background/button grid" groups=["button"]]
+custom_minimum_size = Vector2(70, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d05no")
+action_mode = 0
+text = "+"
