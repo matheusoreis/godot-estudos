@@ -23,31 +23,15 @@ func _button_on_pressed(button_name: String):
 	
 	match button_name:
 		"division":
-			if value_a == "" and operator != "":
-				return
-				
-			operator = "/"
-			i_value_a = 2
+			_change_operator("/")
 		"times":
-			if value_a == "" and operator != "":
-				return
-				
-			operator = "*"
-			i_value_a = 2
+			_change_operator("*")
 		"subtraction":
-			if value_a == "" and operator != "":
-				return
-				
-			operator = "-"
-			i_value_a = 2
+			_change_operator("-")
 		"addition":
-			if value_a == "" and operator != "":
-				return;
-				
-			operator = "+";
-			i_value_a = 2;
+			_change_operator("+")
 		"c":
-			clear();
+			_clear();
 		"=":
 			int_value_a = int(value_a);
 			int_value_b = int(value_b);
@@ -87,7 +71,7 @@ func _equal() -> void:
 	# Show in display the value
 	display_numbers.text = str(math);
 
-func clear() -> void:
+func _clear() -> void:
 	# Reset Values
 	value_a = "";
 	value_b = "";
@@ -100,3 +84,10 @@ func clear() -> void:
 	
 	# Reset Display
 	display_numbers.text = "0";
+
+func _change_operator(operator_func) -> void:
+	if value_a == "" and operator != "":
+		return
+				
+	operator = operator_func;
+	i_value_a = 2;
